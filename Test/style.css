@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: aurora;
+    src: url(../[Fonts]/Monsieur_La_Doulaise/MonsieurLaDoulaise-Regular.ttf);
+} */
+
+body {
+    position: relative;
+    height: 100vh;
+}
+
+.mode {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 4px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    z-index: 20;
+    transition: 0.5s;
+}
+.mode.black {
+    border: 4px solid white;
+    background-color: black;
+    color: white;
+}
+.dark-light {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.light {
+    background-color: white;
+}
+.dark {
+    background-color: black;
+}
+.light,
+.dark {
+    position: absolute;
+    top: -2000px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+.light.active,
+.dark.active {
+    top: -50%;
+}
+.aurora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: aurora;
+    font-size: 200px;
+    z-index: 10;
+    transition: 0.5s;
+}
+.aurora.black {
+    color: white;
+}
